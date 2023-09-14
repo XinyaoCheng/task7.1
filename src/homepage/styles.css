@@ -1,0 +1,133 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+/* navigation bar */
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7FD1AE;
+  margin: 20px;
+}
+.company_name {
+  /* display: inline-block; */
+  /* float: left; */
+  margin-left: 30px;
+}
+.nav_items {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.nav_items li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav_items li:last-child {
+  margin-right: 0;
+}
+
+.nav_items li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav_items li a:hover {
+  background-color: #CCFBE5;
+}
+/* auto play images */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+#carouselAutoplaying {
+  /* max-width: 800px; */
+  /* width: 80%; */
+  height: 400px;
+  justify-content: center;
+  display: flex;
+}
+
+.carousel-item {
+  display: flex;
+}
+.carousel-inner {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.email_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.email_subs_container {
+  margin-top: 20px;
+  width: 90%;
+  background-color: #18BFB1;
+  display: flex;
+  align-items: center;
+}
+
+.email_subs_container label {
+  font-size: 18px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.email_subs_container input {
+  width: 200px;
+  flex: 0 0 auto;
+  margin-right: 10px;
+}
+.email_subs_container button {
+  color: #BCEF7F;
+  border-color: #BCEF7F;
+  margin-right: 20px;
+}
+
+.email_subs_container button:hover {
+  background-color: #BCEF7F;
+  color: #333;
+}
+
+/* footer */
+.footer_container {
+  background-color: #00AAB5;
+  margin: 5px 5% 0;
+
+}
+.footer_container a {
+  color: black;
+  text-decoration: none; 
+}
+.footer_container a:hover {
+  color: #BCEF7F;
+}
+.social_links img {
+  width: 30px;
+  height: 30px;
+}
+.other_links {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+.other_links a {
+  margin:0 15px;
+  margin-bottom: 30px;
+}
+
+
+
+
+
