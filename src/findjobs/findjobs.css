@@ -1,0 +1,44 @@
+.job-card {
+    height: auto;
+    margin: 20px;
+    position: relative;
+}
+
+.job-image {
+    max-height: 200px;
+}
+
+.job-card:hover {
+    box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+    transition: all 0.3s ease;
+
+}
+
+.close-button {
+    width: 100%;
+    border: none;
+    color: rgb(184, 183, 183);
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.close-button:hover {
+    background-color: rgb(184, 183, 183);
+    color: white;
+}
+
+
+.delete-button:hover{
+    background-color: rgb(188, 65, 65);
+  }
+  
+  .delete-button i {
+    margin-top:55%;
+    margin-right: 35%;
+    font-size: 32px; 
+  }
+.filter-container{
+    width: 40%;
+    margin-right: 5%;
+}
