@@ -1,0 +1,24 @@
+.form-div {
+  width: 90%;
+  margin: 10px auto;
+  align-items:flex-start;
+}
+.form-div label {
+  font-size: 18px;
+}
+.uploadButton{
+  margin-right: 10%;
+  width: auto;
+  float: left;
+  color: #333;
+  border-color: #7fd1ae;
+}
+.uploadButton:hover{
+  background-color: #7fd1ae;
+  border-color: #7fd1ae;
+}
+.progress{
+  margin-left: 20%;
+}
+
+

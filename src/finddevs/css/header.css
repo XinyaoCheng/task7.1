@@ -1,0 +1,10 @@
+.header_container {
+  background-color: #7fd1ae;
+  width: 90%;
+  margin: 10px auto;
+}
+.header_container h3 {
+  margin-left: 5px;
+  margin-top: 5px;
+  float: left;
+}

@@ -8,10 +8,10 @@ function NavHeader() {
             <h4 className="compmay_name">DevLink Marketplace</h4>
             <ul className="nav_items">
                 <li>
-                    <a href="#">Find DEV</a>
+                    <Link to='/finddevs'>Find DEV</Link>
                 </li>
                 <li>
-                    <a href="#">Find Jobs</a>
+                    <Link to='/findjobs'>Find Jobs</Link>
                 </li>
                 <li>
                     <Link to='/login'>Login</Link>
