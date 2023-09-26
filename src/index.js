@@ -5,6 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { JobsProvider } from "./context/jobs.context";
 import { UsersProvider } from "./context/users.context";
 
+
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
 
@@ -13,7 +14,10 @@ root.render(
     <BrowserRouter>
       <JobsProvider>
         <UsersProvider>
-        <App />
+
+
+            <App />
+          
         </UsersProvider>
       </JobsProvider>
     </BrowserRouter>

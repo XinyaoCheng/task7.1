@@ -1,0 +1,42 @@
+.plans-container{
+    justify-content: center;
+    margin: 20px;
+}
+
+.planCard-container {
+    height: auto;
+    position: relative;
+    box-shadow: 5px 5px 5px rgba(133, 133, 133, 0.5);
+  }
+  
+  .current-plan .planCard-container::before {
+    content: "";
+    position: absolute;
+    top: -10px; /* 留出 2px 的边框位置 */
+    right: -10px; /* 留出 2px 的边框位置 */
+    bottom: -10px; /* 留出 2px 的边框位置 */
+    left: -10px; /* 留出 2px 的边框位置 */
+    border: 10px solid transparent; /* 初始时边框为透明，宽度为2px */
+    background: linear-gradient(90deg, #82b3e7 0%, #91f191 100%); /* 渐变边框 */
+    z-index: -1; /* 使伪元素在卡片内容下方 */
+    transition: border 0.3s ease; /* 添加过渡效果 */
+  }
+  
+
+
+.plan-intro{
+    height: 110px;
+}
+
+.button-container {
+  height: 70px;
+  position: relative; 
+}
+
+.button-container .button {
+  position: absolute; 
+  bottom: 5px;
+  left: 30%; 
+}
+
+  

@@ -12,6 +12,7 @@ function SignForm() {
         name: '',
         email: '',
         password: '',
+        subscripted:'',
         confirmedPassword: ''
     });
     const backToLogin = () => {
@@ -54,6 +55,7 @@ function SignForm() {
                 name: name,
                 email: email,
                 password: password,
+                subscripted:0
             });
 
             console.log("User information saved in Firestore.");

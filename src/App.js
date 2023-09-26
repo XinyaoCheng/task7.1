@@ -5,6 +5,9 @@ import SignForm from "./login/signup";
 import FindDevs from "./finddevs/finddevs";
 import { Routes,Route } from "react-router-dom";
 import FindJobs from "./findjobs/findjobs";
+import Subscribe from "./subscribe/subscribe";
+import Pay from "./payment/pay";
+
 export default function App() {
   return (
     <div>
@@ -14,6 +17,8 @@ export default function App() {
         <Route path="/signup" element={<SignForm/>}></Route>
         <Route path="/finddevs" element={<FindDevs/>}></Route>
         <Route path="/findjobs" element={<FindJobs/>}></Route>
+        <Route path="/subscribe" element={<Subscribe/>}></Route>
+        <Route path="/pay/:price" element={<Pay/>}></Route>
       </Routes>
     </div>
   );

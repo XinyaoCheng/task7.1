@@ -3,9 +3,9 @@
   float: right;
   width: 20%;
   color: #333;
-  border-color: #7fd1ae;
+  border-color: #7ae498;
 }
 .submitButton:hover {
-  background-color: #7fd1ae;
-  border-color: #7fd1ae;
+  background-color: #7ae498;
+  border-color: #7ae498;
 }

@@ -1,17 +1,15 @@
 import "./login.css"
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from 'react-router-dom';
-import { auth, signInWithGooglePopup, createUserDocFromAuth } from "../utils/firebase";
-import { signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
-import { useUsers } from "../context/users.context";
+import { UsersContext } from "../context/users.context";
 
 
 
 
 
 const LoginForm = (props) => {
-  const {user, setUser} = useUsers();
+  const {user,login,logout}=useContext(UsersContext);
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -27,51 +25,31 @@ const LoginForm = (props) => {
   };
 
   const handleLogin = async () => {
-    setLoginError("");
     console.log("email:"+email);
     console.log("password:"+password);
-    try{
-      const userCredential = await signInWithEmailAndPassword(
-        auth, 
-        email, 
-        password
-      );
-      const loggedInUser = userCredential.user;
-      console.log("User logged in:", user);
-      
-      setUser(loggedInUser)
+    const res = await login(email,password)
+    if(res!==null){
       navigate('/');
-    } catch (error){
-      // alert("Login failed. Please check your email and password.Reason:"+error);
-      if(error.code == "auth/invalid-login-credentials"){
-        setLoginError("Please check your email and password")
-      }
     }
-    
+  
+    };
 
-  };
-
-  const logGoogleUser = async () => {
-    try {
-        const user = await signInWithGooglePopup();
-        if (user) {
-          // 用户已成功登录
-          console.log('Google Sign-In Success:', user);
-          // 这里可以执行跳转或其他操作
-        }
-      } catch (error) {
-        alert("Fail to open Google Provider:"+error);
-      }
-  };
+  // const logGoogleUser = async () => {
+  //   try {
+  //       const user = await signInWithGooglePopup();
+  //       if (user) {
+  //         // 用户已成功登录
+  //         console.log('Google Sign-In Success:', user);
+  //         // 这里可以执行跳转或其他操作
+  //       }
+  //     } catch (error) {
+  //       alert("Fail to open Google Provider:"+error);
+  //     }
+  // };
 
   const handleLogout= async ()=>{
-      try{
-        await signOut(auth);
-        setUser(null);
-        navigate("/login")
-      }catch (error){
-        alert("Logout error:", error);
-      }
+    await logout()
+      
   }
 
 

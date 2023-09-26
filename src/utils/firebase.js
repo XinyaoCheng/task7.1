@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth'
-import {getFirestore, doc, getDoc , setDoc, collection, writeBatch, query, getDocs} from 'firebase/firestore'
+import {getFirestore, doc, getDoc , setDoc, collection, writeBatch, query, getDocs,where} from 'firebase/firestore'
 import { getStorage, ref, getDownloadURL, uploadBytesResumable } from 'firebase/storage';
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -45,6 +45,21 @@ export const fetchJobsAndDocuments = async () =>{
    return staffMap;
 }
 
+  export const getUserByEmail = async(email)=>{
+    try{
+      const q = query(collection(db, 'users'), where('email', '==', email));
+      const querySnapshot = await getDocs(q);
+      if (!querySnapshot.empty) {
+        const userDoc = querySnapshot.docs[0];
+        console.log("getUserByEmail 返回数据:", userDoc.data());
+        return userDoc.data();
+      } else {
+        return null;
+      }} catch (error) {
+        alert(error);
+      }
+    }
+
 export const createUserDocFromAuth= async (userAuth, additionalInformation ={}) =>{
   if (!userAuth) return;
   
@@ -84,6 +99,7 @@ export const signinAuthUserWithEmailAndPassword = async (email, password) =>{
   if (!email || !password) return;
  return await signInWithEmailAndPassword(auth, email, password)
 }
+
 
 const storage=getStorage();
 export const uploadImage = async (file, progressCallback) => {
