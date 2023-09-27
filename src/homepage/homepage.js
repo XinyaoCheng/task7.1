@@ -4,7 +4,7 @@ import NavHeader from './NavHeader';
 import AutoCarous from "./AutoCarousels";
 import Developers from "./Developers";
 import Customers from "./Customers";
-import Subscribe from "./Subscribe";
+import SubscribeEmail from "./Subscribe_email";
 import Footer from "./Footer";
 
 
@@ -15,7 +15,7 @@ export default function Homepage() {
     <AutoCarous/>
     <Developers/>
     <Customers/>
-    <Subscribe/>
+    <SubscribeEmail/>
     <Footer/>
     </div>
   );

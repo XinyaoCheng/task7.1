@@ -126,6 +126,20 @@
   margin:0 15px;
   margin-bottom: 30px;
 }
+.fixed-alert {
+  position: fixed !important;
+  top: 20px !important;
+  right: -100% !important; /* 初始位置在屏幕右侧之外 */
+  z-index: 1000 !important;
+  transition: right 0.5s !important; /* 添加过渡动画效果 */
+}
+
+.slide-in {
+  right: 20px !important; /* 最终位置在屏幕右上角 */
+}
+
+
+
 
 
 
